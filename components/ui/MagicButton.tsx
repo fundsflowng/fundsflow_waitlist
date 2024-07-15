@@ -8,6 +8,7 @@ type ButtonProps = {
   position: string;
   handleClick?: () => void;
   addedStyles?: string;
+  bgColor: string;
 };
 
 const BorderMagic = ({
@@ -16,13 +17,14 @@ const BorderMagic = ({
   position,
   handleClick,
   addedStyles,
+  bgColor,
 }: ButtonProps) => {
   return (
     <div>
       <button
-        className="relative inline-flex w-full h-12 overflow-hidden rounded-lg 
+        className={`relative inline-flex w-full h-12 overflow-hidden rounded-lg 
         p-[1px] focus:outline-none focus:ring-1 focus:ring-blue-600 focus:ring-offset-1 focus:ring-offset-blue-200 
-        md:w-[291px] bg-transparent border-[2px] border-primain_blue"
+        md:w-[291px] bg-${bgColor} border-[2px] border-primain_blue`}
         onClick={handleClick}
       >
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-transparent" />
