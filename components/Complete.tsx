@@ -10,13 +10,13 @@ const Complete = () => {
             <img src="/check.svg" alt="check" />
           </div>
           <h3>Congratulations!</h3>
-          <p>We're excited to have you on board</p>
+          <p>We&apos;re excited to have you on board</p>
         </div>
         <div className="w-full h-3/5 bg-white space-y-4 text-center">
-          <h4>What's Next?</h4>
+          <h4>What&apos;s Next?</h4>
           <p>
-            Stay Tuned: We’ll keep you updated with the latest news, exclusive
-            insights, and progress towards our official launch.
+            Stay Tuned: We&apos;ll keep you updated with the latest news,
+            exclusive insights, and progress towards our official launch.
           </p>
           <div>
             <h4>Connect with Us</h4>
