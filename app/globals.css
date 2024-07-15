@@ -19,5 +19,156 @@ html {
   :root {
     --main-font: var(--font-inter);
     --large-heading: var(--font-roboto-mono);
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.spin-anim {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@layer utilities {
+  .input-class {
+    @apply text-16 placeholder:text-16 rounded-lg border border-gray-500 text-gray-900 placeholder:text-gray-500;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .header-2 {
+    @apply text-18 font-semibold text-gray-900;
+  }
+
+  .text-10 {
+    @apply text-[10px] leading-[14px];
+  }
+
+  .text-12 {
+    @apply text-[12px] leading-[16px];
+  }
+
+  .text-14 {
+    @apply text-[14px] leading-[20px];
+  }
+
+  .text-16 {
+    @apply text-[16px] leading-[24px];
+  }
+
+  .text-18 {
+    @apply text-[18px] leading-[22px];
+  }
+
+  .text-20 {
+    @apply text-[20px] leading-[24px];
+  }
+
+  .text-24 {
+    @apply text-[24px] leading-[30px];
+  }
+
+  .text-26 {
+    @apply text-[26px] leading-[32px];
+  }
+
+  .text-30 {
+    @apply text-[30px] leading-[38px];
+  }
+
+  .text-36 {
+    @apply text-[36px] leading-[44px];
+  }
+  .form-item {
+    @apply flex flex-col gap-1.5;
+  }
+  .auth-form {
+    @apply flex min-h-screen w-full max-w-[420px] flex-col justify-center gap-5 md:py-4 py-4 md:gap-6;
+  }
+  .form-label {
+    @apply text-14 w-full max-w-[280px] font-medium text-gray-700;
+  }
+
+  .form-message {
+    @apply text-12 text-red-500;
+  }
+
+  .form-btn {
+    @apply text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
+  }
+
+  .form-link {
+    @apply text-14 cursor-pointer font-medium text-bankGradient;
   }
 }
