@@ -12,7 +12,7 @@ const Waitlist = () => {
       </div>
       <div className="py-3 flex md:flex-nowrap flex-wrap w-full md:h-12 h-full bg-primain_blue items-center mb-12 px-6">
         <ul
-          className="flex md:flex-row flex-col items-center md:justify-between justify-around 
+          className="flex md:flex-row flex-col md:items-center items-start md:justify-between justify-start 
          w-full list-disc"
         >
           <li className="text-white text-base font-light font-mullish">
