@@ -52,10 +52,10 @@ const Waitlist = () => {
         />
         <br />
         <TextGenerateEffect
-          words="FundsFlow is here to change that. We've developed an intuitive
+          words={`FundsFlow is here to change that. We've developed an intuitive
           platform designed to simplify payment management, streamline
           invoicing, and enhance client communication, allowing business owners
-          to focus on their core activities."
+          to focus on their core activities.`}
           text="base"
           time={0.1}
           className="font-normal"
