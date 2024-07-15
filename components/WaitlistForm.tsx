@@ -9,7 +9,7 @@ import { Form, FormField } from "./ui/form";
 
 import { Button } from "./ui/button";
 import CustomInput from "./CustomInput";
-import { joinWaitlist } from "@/app/actions/waitlist";
+import { joinWaitlist } from "@/actions/waitlist";
 import { useRouter } from "next/navigation";
 import { Loader2Icon } from "lucide-react";
 
