@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/utils/cn";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, roboto.className)}>{children}</body>
+      <body className={cn(inter.className, roboto.className)}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
