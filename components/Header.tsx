@@ -12,7 +12,7 @@ const Header = () => {
             alt="fundsflow"
             width={54}
             height={54}
-            className="object-contain object-center"
+            className="object-contain object-center spin-anim"
           />
         </Link>
       </nav>
