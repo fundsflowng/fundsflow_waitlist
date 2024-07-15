@@ -3,6 +3,7 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/utils/cn";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,8 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(inter.className, roboto.className)}>
-        {children}
-        <Footer />
+        <div className="w-full bg-white flex h-full flex-col">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
