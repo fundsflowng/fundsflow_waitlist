@@ -18,14 +18,14 @@ const Hero = () => {
               Trusted by 500+ business owners
             </p>
           </div>
-          <div className="w-[90%]">
+          <div className="w-[90%] space-y-2">
             <TextGenerateEffect
               words="Fundsflow is launching soon"
-              className="md:text-[48px] text-2xl font-roboto md:font-bold font-bold text-black uppercase md:leading-[5rem] leading-[4.5rem]"
+              className="md:text-[48px] text-xl font-roboto md:font-bold font-bold text-black uppercase md:leading-[5rem] leading-[4.5rem]"
               time={0.2}
               diff={true}
             />
-            <p className="text-[20px] md:leading-8 leading-normal md:tracking-[0.5px] tracking-normal font-inter font-medium text-lighter_dark">
+            <p className="text-[18px] md:leading-8 leading-normal md:tracking-[0.5px] tracking-normal font-inter font-medium text-lighter_dark">
               Get ready to transform the way you manage your business finances
             </p>
           </div>
