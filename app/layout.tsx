@@ -21,6 +21,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Fundsflow",
   description: "Simplify Small Business Payments with fundsflow",
+  icons: "logo.svg",
 };
 
 export default function RootLayout({
