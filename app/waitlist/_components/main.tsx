@@ -52,7 +52,7 @@ const MainWaitlist = ({ currentPage, setCurrentPage }: PageState) => {
         />
         <br />
         <p className="dark:text-white font-mullish font-normal text-base text-main_black leading-snug tracking-wide">
-          FundsFlow is here to change that. We've developed an intuitive
+          FundsFlow is here to change that. We&apos;ve developed an intuitive
           platform designed to simplify payment management, streamline
           invoicing, and enhance client communication, allowing business owners
           to focus on their core activities
