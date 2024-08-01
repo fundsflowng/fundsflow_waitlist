@@ -2,6 +2,8 @@
 import React from "react";
 import BorderMagic from "./ui/MagicButton";
 import { useRouter } from "next/navigation";
+import { TextGenerateEffect2 } from "./ui/GenertateTextEffect2";
+import { TextGenerateEffect } from "./ui/GenerateTextEffect";
 
 const Hero = () => {
   const router = useRouter();
@@ -17,10 +19,12 @@ const Hero = () => {
             </p>
           </div>
           <div className="w-[90%]">
-            <h1 className="font-roboto md:text-[48px] text-2xl font-semibold text-black uppercase md:leading-[5rem] leading-">
-              <span className="text-darker_blue text-center ">FundsFlow</span>{" "}
-              is launching Soon!
-            </h1>
+            <TextGenerateEffect
+              words="Fundsflow is launching soon"
+              className="md:text-[48px] text-2xl font-roboto md:font-bold font-bold text-black uppercase md:leading-[5rem] leading-[4.5rem]"
+              time={0.2}
+              diff={true}
+            />
             <p className="text-[20px] md:leading-8 leading-normal md:tracking-[0.5px] tracking-normal font-inter font-medium text-lighter_dark">
               Get ready to transform the way you manage your business finances
             </p>

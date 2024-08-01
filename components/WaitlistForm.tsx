@@ -9,18 +9,19 @@ import { Form, FormField } from "./ui/form";
 
 import { Button } from "./ui/button";
 import CustomInput from "./CustomInput";
-import { joinWaitlist } from "@/actions/waitlist";
+import { createWaitlist, joinWaitlist } from "@/actions/waitlist";
 import { useRouter } from "next/navigation";
 import { Loader2Icon } from "lucide-react";
+import { PageState } from "@/typings";
 
-const WaitlistForm = () => {
+const WaitlistForm = ({ currentPage, setCurrentPage }: PageState) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: " ",
+      name: "",
       email: "",
       phone: "",
-      businessType: " ",
+      businessType: "",
       reason: " ",
     },
   });
@@ -30,14 +31,18 @@ const WaitlistForm = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true);
+
     try {
-      const result = await joinWaitlist(values);
-      console.log(result.message);
+      const result = await createWaitlist(values);
+      if (result?.success) {
+        console.log(result.message);
+      }
     } catch (error) {
+      throw new Error("failed to connect to server");
     } finally {
       setIsLoading(false);
+      setCurrentPage(1);
       router.refresh();
-      router.push("/");
       form.reset(form.getValues());
     }
   };
